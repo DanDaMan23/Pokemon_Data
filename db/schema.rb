@@ -10,12 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_13_204154) do
+ActiveRecord::Schema.define(version: 2020_10_14_212820) do
+
+  create_table "abilities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "abilities_types", id: false, force: :cascade do |t|
+    t.integer "ability_id"
+    t.integer "type_id"
+    t.index ["ability_id"], name: "index_abilities_types_on_ability_id"
+    t.index ["type_id"], name: "index_abilities_types_on_type_id"
+  end
 
   create_table "pokemons", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pokemons_abilities", id: false, force: :cascade do |t|
+    t.integer "pokemon_id"
+    t.integer "ability_id"
+    t.index ["ability_id"], name: "index_pokemons_abilities_on_ability_id"
+    t.index ["pokemon_id"], name: "index_pokemons_abilities_on_pokemon_id"
   end
 
   create_table "pokemons_types", id: false, force: :cascade do |t|
