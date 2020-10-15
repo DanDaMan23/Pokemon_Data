@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/home'
+  # get 'pages/home'
   # get 'types/index'
   # get 'types/show'
   # get 'pokemons/index'
