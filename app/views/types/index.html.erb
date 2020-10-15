@@ -3,9 +3,14 @@
 <% if @types.empty? %>
     <p>There are no Pokemon Types</p>
 <% else %>
-    <ul class="list-group">
-        <% @types.each do |type| %>
-            <li class="list-group-item"><%= type.name %></li>
-        <% end %>
-    </ul>
+    <div class="container">
+        <div class="row">
+            <% @types.each do |type| %>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h3><%= type.name %></h3>
+                </div>
+            <% end %>
+        </div>
+
+    </div>
 <% end %>
