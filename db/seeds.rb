@@ -22,7 +22,7 @@ get_types().each do |type|
     Type.create(name: type["name"])
 end
 
-puts get_pokemon(1).inspect
+puts get_pokemon(1)
 
 
 puts "Types created: #{Type.count}"
