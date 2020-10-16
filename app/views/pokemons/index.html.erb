@@ -1,2 +1,12 @@
 <h1>All Pokemons</h1>
-<p>Find me in app/views/pokemons/index.html.erb</p>
+
+<% if @pokemons.empty? %>
+    <p>There are no Pokemons</p>
+<% else %>
+    <ul>
+        <% @pokemons.each do |pokemon| %>
+            <li><%= link_to pokemon.name, pokemon %></li>
+        <% end %>
+    </ul>
+<% end %>
+

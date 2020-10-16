@@ -1,2 +1,11 @@
-<h1>Types#show</h1>
-<p>Find me in app/views/types/show.html.erb</p>
+<h1><%= @type.name.titleize %> Pokemons</h1>
+
+<% if @type.pokemons.empty? %>
+    <p>There are no <%= @type.name.titleize %> Pokemons</p>
+<% else %>
+    <ul>
+        <% @type.pokemons.each do |pokemon| %>
+            <li><%= link_to pokemon.name, pokemon %></li>
+        <% end %>
+    </ul>
+<% end %>

@@ -1,2 +1,8 @@
-<h1>Pokemons#show</h1>
-<p>Find me in app/views/pokemons/show.html.erb</p>
+<h1> <%=@pokemon.name.titleize%> </h1>
+
+<h3>Types</h3>
+<ul>
+    <% @pokemon.types.each do |type| %>
+        <li><%= link_to type.name.titleize, type %></li>
+    <% end %>
+</ul>
