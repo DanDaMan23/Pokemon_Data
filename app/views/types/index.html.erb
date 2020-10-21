@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <% @types.each do |type| %>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 border d-flex justify-content-center element_type <%= type.name %>">
                     <h3><%= link_to type.name.titleize, type %></h3>
                 </div>
             <% end %>
