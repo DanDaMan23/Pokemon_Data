@@ -3,9 +3,26 @@
 <% if @pokemons.empty? %>
     <p>There are no Pokemons</p>
 <% else %>
-    <ul>
+    <ul class="list-group">
         <% @pokemons.each do |pokemon| %>
-            <li><%= link_to pokemon.name, pokemon %></li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-6">
+                    <h4><%= link_to pokemon.name.titleize, pokemon %></h4>
+                </div>
+
+                <div class="col-6">
+                    <h4>Element Types</h4>
+                    <% pokemon.types.each do |type| %>
+                        <p><%= type.name.titleize %></p>
+                    <% end %>
+                </div>
+            </div>
+
+
+
+
+            </li>
         <% end %>
     </ul>
 <% end %>
