@@ -1,7 +1,6 @@
 class PokemonsController < ApplicationController
   def index
-    @q = Pokemon.ransack(params[:q])
-    @pokemons = Pokemon.all
+    @pokemons = Pokemon.page(params[:page])
   end
 
   def show
