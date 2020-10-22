@@ -1,6 +1,5 @@
 require 'rest-client'
 require 'json'
-# require 'poke-api-v2'
 
 Type.delete_all
 Pokemon.delete_all
@@ -46,7 +45,6 @@ end
 end
 
 # Pokemon.create(name: "Venusaur", types: [Type.find_by(name: "grass"), Type.find_by(name: "poison")])
-
 
 # puts get_pokemon(3)["abilities"][0]["ability"]["name"]
 
