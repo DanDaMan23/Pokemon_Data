@@ -13,3 +13,113 @@
  *= require_tree .
  *= require_self
  */
+
+ .element_type
+ {
+     border: black solid;
+     border-radius: 3rem;
+ }
+
+ .element_type h3 a
+ {
+     color: white;
+ }
+
+.normal
+{
+    background-color: rgb(173, 173, 134)
+}
+
+.water
+{
+    background-color: rgb(0, 119, 255);
+}
+
+.fighting
+{
+    background-color: red;
+}
+
+.flying
+{
+    background-color: violet
+}
+
+.poison
+{
+    background-color: rgb(178, 28, 243)
+}
+
+.ground
+{
+    background-color: burlywood;
+}
+
+.rock
+{
+    background-color: rgb(223, 152, 60);
+}
+
+.bug
+{
+    background-color: rgb(134, 196, 41);
+}
+
+.ghost
+{
+    background-color: purple;
+}
+
+.steel
+{
+    background-color: grey;
+}
+
+.fire
+{
+    background-color: orange;
+}
+
+.grass
+{
+    background-color: rgb(75, 218, 75);
+}
+
+.electric
+{
+    background-color: rgb(240, 240, 46);
+}
+
+.psychic
+{
+    background-color: rgb(207, 88, 108);
+}
+
+.ice
+{
+    background-color: lightblue;
+}
+
+.dragon
+{
+    background-color: rgb(119, 0, 255);
+}
+
+.dark
+{
+    background-color: rgb(105, 86, 86);
+}
+
+.fairy
+{
+    background-color: rgb(245, 198, 206);
+}
+
+.shadow
+{
+    background-color: black;
+}
+.unknown
+{
+    background-color: rgb(75, 12, 75);
+}
