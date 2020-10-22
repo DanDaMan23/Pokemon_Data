@@ -4,7 +4,7 @@ require 'json'
 
 Pokemon.delete_all
 Ability.delete_all
-# Move.delete_all
+Move.delete_all
 Type.delete_all
 
 def get_types()
@@ -37,9 +37,9 @@ get_types().each do |type|
     Type.create(name: type["name"])
 end
 
-# (1..50).each do |i|
-
-# end
+(1..100).each do |i|
+    Ability.find_or_create_by(name: get_ability(i)["name"])
+end
 
 (1..200).each do |i|
     pokemon = get_pokemon(i)
@@ -62,7 +62,7 @@ end
 
     # pokemon_moves.each do |move|
     #     move_detail = get_move(move["move"]["name"])
-    #     pokemon_moves_objects << Move.find_or_create_by(name: move_detail["name"], type: Type.find_by(move_detail["type"]["name"]) )
+    #     pokemon_moves_objects << Move.find_or_create_by(name: move_detail["name"], type: Type.find_by(name: move_detail["type"]["name"]) )
     # end
 
     Pokemon.create(name: pokemon_name, types: pokemon_types_object)
